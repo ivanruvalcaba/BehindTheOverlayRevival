@@ -1,0 +1,38 @@
+{
+    "background": {
+        "scripts": ["js/background.js", "js/overlay_remover.js"]
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "img/icon-16.png",
+            "19": "img/icon-19.png",
+            "38": "img/icon-38.png",
+            "48": "img/icon.png",
+            "96": "img/icon@2x.png"
+        },
+        "default_title": "Remove the overlay from this page"
+    },
+    "commands": {
+        "removeOverlay": {
+            "suggested_key": {
+                "default": "Alt+Shift+X"
+            },
+            "description": "Remove the overlay from this page"
+        }
+    },
+    "description": "Click to close any overlay popup on any website.",
+    "icons": {
+        "16": "img/icon-16.png",
+        "19": "img/icon-19.png",
+        "38": "img/icon-38.png",
+        "48": "img/icon.png",
+        "96": "img/icon@2x.png"
+    },
+    "manifest_version": 2,
+    "name": "Behind Overlay Revival",
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "version": "0.1.4"
+}
