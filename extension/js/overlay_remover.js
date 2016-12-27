@@ -1,9 +1,11 @@
-/* global overlayRemoverInstance:true */
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[hideElementsAtZIndexNear]" }] */
-
 // This is a script that will remove overlay popups in the 99% of the cases.
 // It's doing that by detecting DOM elements.
-let debug = false;
+
+/* eslint no-unused-vars: ["error",
+ * {"varsIgnorePattern": "[hideElementsAtZIndexNear|overlayRemoverInstance]"}]
+ */
+
+const debug = false;
 
 let utils = (function() {
     function hideElement(element) {
@@ -29,7 +31,8 @@ let utils = (function() {
     }
 
     function isAnElement(node) {
-        return node.nodeType === 1; // nodeType 1 mean element
+        // nodeType 1 mean element
+        return node.nodeType === 1;
     }
 
     function nodeListToArray(nodeList) {
@@ -43,8 +46,8 @@ let utils = (function() {
     }
 
     function collectParrents(element, predicate) {
-        let matchedElement = element && predicate(element) ? [element] : [];
-        let parent = element.parentNode;
+        const matchedElement = element && predicate(element) ? [element] : [];
+        const parent = element.parentNode;
 
         if (parent && parent !== document && parent !== document.body) {
             return matchedElement.concat(collectParrents(parent, predicate));
@@ -60,10 +63,10 @@ let utils = (function() {
         let nextGrandChildNodes = [];
 
         function calculateBreathFirst(element) {
+            const childNodes = element.childNodes;
             let total = 0;
             let nextChildElements = [];
 
-            let childNodes = element.childNodes;
             total = childNodes.length;
 
             forEachElement(childNodes, function(childNode) {
@@ -107,6 +110,7 @@ let utils = (function() {
 let overlayRemover = function(debug, utils) {
     function hideElementsAtZIndexNear(nearElement, thresholdZIndex) {
         let parent = nearElement.parentNode;
+
         // The case when nearElement is a document
         if (parent === null) {
             return;
@@ -124,9 +128,8 @@ let overlayRemover = function(debug, utils) {
     // Check the element in the middle of the screen
     // Search fo elements that has zIndex attribute
     function methodTwoHideElementMiddle() {
-        let overlayPopup = document.elementFromPoint(window.innerWidth / 2,
+        const overlayPopup = document.elementFromPoint(window.innerWidth / 2,
                 window.innerHeight / 2);
-
         let overlayFound = utils.collectParrents( overlayPopup, function(el) {
             return utils.getZIndex(el) > 0;
         });
@@ -146,7 +149,7 @@ let overlayRemover = function(debug, utils) {
     }
 
     function containersOverflowAuto() {
-        let containers = [document.documentElement, document.body];
+        const containers = [document.documentElement, document.body];
 
         containers.forEach(function(element) {
             if (window.getComputedStyle(element).overflow === 'hidden') {
@@ -192,7 +195,7 @@ let overlayRemover = function(debug, utils) {
     };
 };
 
-overlayRemoverInstance = overlayRemover(debug, utils);
+let overlayRemoverInstance = overlayRemover(debug, utils);
 
 function overlayRemoverRun() {
     overlayRemoverInstance.run();
