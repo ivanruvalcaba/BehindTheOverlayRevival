@@ -2,7 +2,7 @@
 [//]: # (Author: Icaro Perseo)
 [//]: # (Contact: <icaroperseo[at]protonmail[dot]com>)
 [//]: # (Created: 26 dic 2016 16:50:04)
-[//]: # (Last Modified: 26 dic 2016 18:37:16)
+[//]: # (Last Modified: 27 dic 2016 11:49:52)
 
 # Behind The Overlay Revival —Mozilla Firefox and Google Chrome Web Extension—
 
@@ -32,13 +32,14 @@ The extension should work on all sites that have overlays.
 + Supports hiding of multiple DOM overlay elements.
 + Enables overflow auto of the body when overlay script hides it to disable the scroll of the page.
 
-## Roadmap
+## Changelog
 
 * [x] Porting the original complement as _Firefox Web Extension_.
 * [x] Fix minor issues (typos).
 * [x] Improve the original code (just a bit).
 * [x] Add _Behind The Overlay Revival_ to context menu.
 * [x] Add to _Behind The Overlay Revival_ one shortcut (`Alt + Shift + x`).
+* [x] English/Spanish translations added (locale support).
 * [ ] Add user menu to change the default shortcut.
 * [ ] Add site whitelist/blacklist support (**on user demand**).
 
