@@ -10,17 +10,18 @@
             "48": "img/icon.png",
             "96": "img/icon@2x.png"
         },
-        "default_title": "Remove the overlay from this page"
+        "default_title": "__MSG_defaultBrowserActionTitle__"
     },
     "commands": {
         "removeOverlay": {
             "suggested_key": {
                 "default": "Alt+Shift+X"
             },
-            "description": "Remove the overlay from this page"
+            "description": "__MSG_suggestedKeyTitle__"
         }
     },
-    "description": "Click to close any overlay popup on any website.",
+    "default_locale": "en",
+    "description": "__MSG_extensionDescription__",
     "icons": {
         "16": "img/icon-16.png",
         "19": "img/icon-19.png",
@@ -29,10 +30,10 @@
         "96": "img/icon@2x.png"
     },
     "manifest_version": 2,
-    "name": "Behind Overlay Revival",
+    "name": "Behind The Overlay Revival",
     "permissions": [
         "activeTab",
         "contextMenus"
     ],
-    "version": "0.1.4"
+    "version": "0.1.6"
 }

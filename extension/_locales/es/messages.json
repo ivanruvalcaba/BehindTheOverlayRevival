@@ -1,0 +1,18 @@
+{
+    "extensionDescription": {
+        "message": "Cierre el mensaje emergente de algún sitio web con un solo clic.",
+        "description": "Description of the extension."
+    },
+    "defaultBrowserActionTitle": {
+        "message": "Cerrar el mensaje emergente de esta página",
+        "description": "Description of the browser action."
+    },
+    "suggestedKeyTitle": {
+        "message": "Cerrar el mensaje emergente de esta página",
+        "description": "Description of the suggested key."
+    },
+    "contextMenuRemoveOverlayTitle": {
+        "message": "Cerrar el mensaje emergente de esta página",
+        "description": "Description of the context menu remove overlay."
+    }
+}

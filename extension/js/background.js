@@ -1,3 +1,6 @@
+const contextMenuRemoveOverlayTitle = chrome.i18n.getMessage(
+        'contextMenuRemoveOverlayTitle');
+
 function removeOverlay() {
     // No tabs or host permissions needed!
     chrome.tabs.executeScript(null, {file: '/js/overlay_remover.js'},
@@ -10,7 +13,7 @@ function removeOverlay() {
 // Create all the context menu items.
 chrome.contextMenus.create({
     id: 'removeOverlay',
-    title: 'Remove the overlay from this page'
+    title: contextMenuRemoveOverlayTitle
 });
 
 // The click event listener, where we perform the appropriate action given the
