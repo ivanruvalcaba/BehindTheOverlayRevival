@@ -1,0 +1,18 @@
+{
+    "extensionDescription": {
+        "message": "Klicke, um ein beliebiges Overlay-Popup auf jeder Website zu schließen.",
+        "description": "Beschreibung der Erweiterung."
+    },
+    "defaultBrowserActionTitle": {
+        "message": "Entferne das Overlay von dieser Seite",
+        "description": "Beschreibung der Browser-Aktion."
+    },
+    "suggestedKeyTitle": {
+        "message": "Entferne das Overlay von dieser Seite",
+        "description": "Beschreibung des vorgeschlagenen Schlüssels."
+    },
+    "contextMenuRemoveOverlayTitle": {
+        "message": "Entferne das Overlay von dieser Seite",
+        "description": "Beschreibung des Kontextmenüs entfernen Overlay."
+    }
+}
