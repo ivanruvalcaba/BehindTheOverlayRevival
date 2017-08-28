@@ -3,16 +3,16 @@
         "message": "Click to close any overlay popup on any website.",
         "description": "Description of the extension."
     },
-    "defaultBrowserActionTitle": {
-        "message": "Remove the overlay from this page",
+    "defaultPageActionTitle": {
+        "message": "Remove the overlay from this page.",
         "description": "Description of the browser action."
     },
     "suggestedKeyTitle": {
-        "message": "Remove the overlay from this page",
+        "message": "Remove the overlay from this page.",
         "description": "Description of the suggested key."
     },
-    "contextMenuRemoveOverlayTitle": {
-        "message": "Remove the overlay from this page",
-        "description": "Description of the context menu remove overlay."
+    "noOverlayAlertMessage": {
+        "message": "No overlay has been found on this website.",
+        "description": "Description of alert message."
     }
 }

@@ -1,7 +1,20 @@
-// Get the translated string for context menu.
-const contextMenuRemoveOverlayTitle = browser.i18n.getMessage(
-    'contextMenuRemoveOverlayTitle');
+let expression = /(http(s?)):\/\//gi;
+let regex = new RegExp(expression);
+let gettingAllTabs = browser.tabs.query({});
 
+// Returns true only if the URL's protocol is in APPLICABLE_PROTOCOLS.
+function protocolIsApplicable(url) {
+    return url.match(regex);
+}
+
+// Initialize the page action. Only operates on tabs whose URL's protocol is applicable.
+function initializePageAction(tab) {
+    if (protocolIsApplicable(tab.url)) {
+        browser.pageAction.show(tab.id);
+    }
+}
+
+// Main script.
 function removeOverlay() {
     // No tabs or host permissions needed!
     browser.tabs.executeScript(null, {file: '/js/overlay_remover.js'},
@@ -11,18 +24,16 @@ function removeOverlay() {
         });
 }
 
-// Create all the context menu items.
-browser.contextMenus.create({
-    id: 'removeOverlay',
-    title: contextMenuRemoveOverlayTitle
+// When first loaded, initialize the page action for all tabs.
+gettingAllTabs.then((tabs) => {
+    for (let tab of tabs) {
+        initializePageAction(tab);
+    }
 });
 
-// The click event listener, where we perform the appropriate action given the
-// ID of the menu item that was clicked.
-browser.contextMenus.onClicked.addListener(function(info) {
-    if (info.menuItemId === 'removeOverlay') {
-        removeOverlay();
-    }
+// Each time a tab is updated, reset the page action for that tab.
+browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
+    initializePageAction(tab);
 });
 
 // Shortcut listener.
@@ -32,5 +43,5 @@ browser.commands.onCommand.addListener(function(command) {
     }
 });
 
-// Called when the user clicks on the browser action.
-browser.browserAction.onClicked.addListener(removeOverlay);
+// Called when the user clicks on the page action.
+browser.pageAction.onClicked.addListener(removeOverlay);

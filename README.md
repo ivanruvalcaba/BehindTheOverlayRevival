@@ -1,12 +1,12 @@
 [//]: # (Filename: README.md)
-[//]: # (Author: Icaro Perseo)
-[//]: # (Contact: <icaroperseo[at]protonmail[dot]com>)
+[//]: # (Author: Iván Ruvalcaba)
+[//]: # (Contact: <mario.i.ruvalcaba[at]gmail[dot]com>)
 [//]: # (Created: 26 dic 2016 16:50:04)
-[//]: # (Last Modified: 27 dic 2016 11:49:52)
+[//]: # (Last Modified: 03 sep 2017 18:52:30)
 
-# Behind The Overlay Revival —Mozilla Firefox and Google Chrome Web Extension—
+# Behind The Overlay Revival —Mozilla Firefox WebExtension—
 
-> This project is a fork of [Behind The Overlay](https://github.com/NicolaeNMV/BehindTheOverlay) add-on, ported as web extension for _Mozilla Firefox_ as well as some improvements implemented for both web browsers.
+> This project is a fork of [Behind The Overlay](https://github.com/NicolaeNMV/BehindTheOverlay) add-on, ported as _Mozilla Firefox WebExtension_ as well as some improvements implemented.
 
 ## What's it all about?
 
@@ -16,9 +16,9 @@ I find this very annoying as every site will have a different way to close that 
 
 This extension solves this problem by offering you **one button to close any overlay on any website** you may ever encounter.
 
-## Web Extension in action
+## WebExtension in action
 
-<img src="resources/bor-demo.gif" alt="Behind The Overlay Revival in action" style="width: 800px;"/>
+![](docs/bor.jpg "Remove overlay")
 
 ## Does it work everywhere ?
 
@@ -34,14 +34,11 @@ The extension should work on all sites that have overlays.
 
 ## Changelog
 
-* [x] Porting the original complement as _Firefox Web Extension_.
-* [x] Fix minor issues (typos).
-* [x] Improve the original code (just a bit).
-* [x] Add _Behind The Overlay Revival_ to context menu.
-* [x] Add to _Behind The Overlay Revival_ one shortcut (`Alt + Shift + x`).
-* [x] English/Spanish translations added (locale support).
-* [ ] Add user menu to change the default shortcut.
-* [ ] Add site whitelist/blacklist support (**on user demand**).
++ Porting the original complement as _Firefox Web Extension_.
++ Improved the original code.
++ Add to _Behind The Overlay Revival_ one shortcut (`Alt + Shift + x`).
++ English/Spanish translations added (locale support).
++ Implemented a clickable icon inside the browser's address bar (`pageAction`).
 
 ## Feedback
 

@@ -1,16 +1,20 @@
 {
+    "author": "Iván Ruvalcaba",
     "background": {
         "scripts": ["js/background.js", "js/overlay_remover.js"]
     },
-    "browser_action": {
+    "page_action": {
+        "browser_style": true,
         "default_icon": {
-            "16": "img/icon-16.png",
-            "19": "img/icon-19.png",
-            "38": "img/icon-38.png",
-            "48": "img/icon.png",
-            "96": "img/icon@2x.png"
+            "16": "img/close.svg",
+            "19": "img/close.svg",
+            "32": "img/close.svg",
+            "38": "img/close.svg",
+            "48": "img/close.svg",
+            "64": "img/close.svg",
+            "96": "img/close.svg"
         },
-        "default_title": "__MSG_defaultBrowserActionTitle__"
+        "default_title": "__MSG_defaultPageActionTitle__"
     },
     "commands": {
         "removeOverlay": {
@@ -22,24 +26,22 @@
     },
     "default_locale": "en",
     "description": "__MSG_extensionDescription__",
-    "developer": {
-        "name": "Icaro Perseo",
-        "url": "https://icaroperseo.github.io/"
-    },
-    "homepage_url": "https://github.com/icaroperseo/BehindTheOverlayRevival",
+    "homepage_url": "https://github.com/ivanruvalcaba/BehindTheOverlayRevival",
     "icons": {
-        "16": "img/icon-16.png",
-        "19": "img/icon-19.png",
-        "38": "img/icon-38.png",
-        "48": "img/icon.png",
-        "96": "img/icon@2x.png"
+        "16": "img/logo.svg",
+        "19": "img/logo.svg",
+        "32": "img/logo.svg",
+        "38": "img/logo.svg",
+        "48": "img/logo.svg",
+        "64": "img/logo.svg",
+        "96": "img/logo.svg"
     },
     "manifest_version": 2,
     "name": "Behind The Overlay Revival",
     "permissions": [
         "activeTab",
-        "contextMenus"
+        "tabs"
     ],
     "short_name": "BOR",
-    "version": "0.1.7"
+    "version": "0.1.8"
 }

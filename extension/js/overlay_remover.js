@@ -6,6 +6,7 @@
  */
 
 const debug = false;
+let alertMessage = browser.i18n.getMessage('noOverlayAlertMessage');
 
 let utils = (function() {
     function hideElement(element) {
@@ -164,7 +165,7 @@ let overlayRemover = function(debug, utils) {
             let first = i === 0;
             if (candidate === false) {
                 if (first)
-                    alert('No overlay has been found on this website.');
+                    alert(alertMessage);
                 break;
             } else {
                 if (!first) {
