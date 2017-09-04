@@ -28,7 +28,7 @@ The extension should work on all sites that have overlays.
 
 + Requires no special permissions.
 + Extremely lightweight, relies on little known `document.elementFromPoint` browser's function to find elements that are in front with the highest z-index.
-+ Non-intrusive. The extension activates only when you click its button (**and now with context menu and shortcut support!!!**), thereby it has no impact on navigation performance when you don't use the extension. Doesn't inject tons of CSS rules as AdBlock extension is doing for example.
++ Non-intrusive. The extension activates only when you click its button, thereby it has no impact on navigation performance when you don't use the extension. Doesn't inject tons of CSS rules as AdBlock extension is doing for example.
 + Supports hiding of multiple DOM overlay elements.
 + Enables overflow auto of the body when overlay script hides it to disable the scroll of the page.
 
