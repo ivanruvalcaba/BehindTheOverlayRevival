@@ -2,7 +2,7 @@
 [//]: # (Author: Iván Ruvalcaba)
 [//]: # (Contact: <mario.i.ruvalcaba[at]gmail[dot]com>)
 [//]: # (Created: 26 dic 2016 16:50:04)
-[//]: # (Last Modified: 03 sep 2017 18:52:30)
+[//]: # (Last Modified: 07 sep 2017 12:43:19)
 
 # Behind The Overlay Revival —Mozilla Firefox WebExtension—
 
@@ -39,6 +39,7 @@ The extension should work on all sites that have overlays.
 + Add to _Behind The Overlay Revival_ one shortcut (`Alt + Shift + x`).
 + English/Spanish translations added (locale support).
 + Implemented a clickable icon inside the browser's address bar (`pageAction`).
++ The WebExtension is only enabled when visiting web pages that use the HTTP/HTTPS protocol.
 
 ## Feedback
 
