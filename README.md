@@ -4,6 +4,8 @@
 [//]: # (Created: 26 dic 2016 16:50:04)
 [//]: # (Last Modified: 07 sep 2017 12:43:19)
 
+> This project has been migrated to **GitLab**: [https://gitlab.com/ivanruvalcaba/BehindTheOverlayRevival](https://gitlab.com/ivanruvalcaba/BehindTheOverlayRevival) _(#GithubExodus)_.
+
 # Behind The Overlay Revival —Mozilla Firefox WebExtension—
 
 > This project is a fork of [Behind The Overlay](https://github.com/NicolaeNMV/BehindTheOverlay) add-on, ported as _Mozilla Firefox WebExtension_ as well as some improvements implemented.
